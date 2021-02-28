@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+  import React from "react";
+  import { Photo, Title, Wrapper } from "./Profile";
+  import "./styles.css";
+  import { Welcome} from "./Welcome";
+  function myfunction(value){
+    alert(value)
+  }
+  function App() {
+    return (
+      <div>
+      <Wrapper>
+        <Photo id="img" src="image1.jpg" />
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Title
+          style={{
+            color: "red"
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+          sabrine ben saada
+        </Title>
 
-export default App;
+        <Title 
+        style={{
+        color:"blue"
+        }}
+        >
+          etudiante
+        </Title>
+        <Welcome alertMyInput={myfunction}/>
+      
+        </Wrapper> 
+      </div>
+  );
+  };
+  export default App;
